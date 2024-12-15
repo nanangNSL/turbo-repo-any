@@ -1,0 +1,48 @@
+{
+  "name": "turborepo",
+  "private": true,
+  "scripts": {
+    "add:api": "pnpm add --filter=api",
+    "build": "turbo build",
+    "changeset": "changeset",
+    "clear:modules": "npx npkill",
+    "commit": "cz",
+    "dev": "turbo dev",
+    "dev:api": "pnpm dev --filter=api",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "lint": "turbo lint",
+    "prepare": "husky",
+    "prod": "turbo prod",
+    "test": "turbo test"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.8",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.2.5",
+    "prettier-plugin-css-order": "^2.1.2",
+    "prettier-plugin-organize-imports": "^4.1.0",
+    "prettier-plugin-packagejson": "^2.5.5",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "turbo": "^2.3.3",
+    "typescript": "^5.4.5",
+    "zod": "^3.23.8"
+  },
+  "packageManager": "pnpm@8.15.6",
+  "engines": {
+    "node": ">=18"
+  }
+}
